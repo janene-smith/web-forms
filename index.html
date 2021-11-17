@@ -18,27 +18,34 @@
       </label>
 
       <!-- the other label syntax -->
-      <label for="city">What city are you in?</label>
-        <input id="city" type="city" name="applicantCity">
+      <label for="city">City you live in:</label>
+        <input id="city" type="city" name="applicantCity" placeholder="Seattle">
 
-        <label>How many pets are in your home?
-          <input type="number" name="petCount">
-        </label>
+        <!-- alternate label syntax. "for" of label matches "id" of input. -->
+        <label for="current">How many pets are in your home now?</label>
+          <input type="number" name="currentPets" id="current">
 
         <label>Why do you want to adopt a new pet?
           <textarea name="applicantReason" rows="4" cols="50">Because I don't have enough cat hair on my sofa :(</textarea>
         </label>
 
-        <fieldset>
-          <legend>What types of animals are you interested in?</legend>
-          <label>Dogs
-          <input type="checkbox" name="type" value="dogs">
+        <fieldset class="checkbox">What types of animal(s) are you interested in adopting?
+
+          <label>
+          <input type="checkbox" name="species" value="dog">Dog
+          <span class="checkmark"></span>
           </label>
-          <label>Cats
-          <input type="checkbox" name="type" value="cats">
+          <label>
+          <input type="checkbox" name="species" value="cat">Cat
+          <span class="checkmark"></span>
           </label>
-          <label>Bunnies
-          <input type="checkbox" name="type" value="bunnies">
+          <label>
+          <input type="checkbox" name="species" value="rabbit">Rabbit
+          <span class="checkmark"></span>
+          </label>
+          <label>
+          <input type="checkbox" name="species" value="other">Other
+          <span class="checkmark"></span>
           </label>
         </fieldset>
 
@@ -70,6 +77,12 @@
         </label>
 
       <input type="submit" value="Apply Now!">
+
+      <select  name="cats" size="3" multiple>
+        <option value="Grump">Grumpy cat</option>
+        <option value="Garfield">Garfield</option>
+        <option value="Tom">Tom</option>
+      </select>
     </form>
   </body>
 </html>
